@@ -6,10 +6,13 @@ import userRouter from './routes/userRoutes.js'
 
 
 
+
 // Add config
 const PORT = process.env.PORT || 4000
 const app = express()
 await connectDB()
+app.use(express.static('public'));
+
 
 
 //Initialize middlewares
